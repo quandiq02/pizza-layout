@@ -1,0 +1,13 @@
+.body-wrapper {
+    width: 100%;
+    height: auto;
+}
+
+@import "./variables";
+@import "./fonts";
+@import "./mixins";
+@import "./reset";
+@import "./header";
+@import "./about";
+@import "./create";
+@import "./footer";

@@ -1,0 +1,64 @@
+.header {
+    @include mainBlock($scWidth, 0 auto, flex, center);
+    padding: 20px 0;
+    background-color: $bg-color;
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__item:first-child {
+        .header__link {
+            padding-left: 0;
+        }
+    }
+
+    &__item:last-child {
+        .header__link {
+            padding-right: 0;
+        }
+    }
+
+    &__item:last-child {
+        .header__link::after {
+            width: 0;
+            height: 0;
+            appearance: none;
+            font-size: 0;
+        }
+    }
+
+    &__link {
+        margin: 17px 0 32px 0;
+        padding: 0 23px 0 20px;
+        position: relative;
+        display: block;
+        @include font(17px, $ffMontseratBold, 700, $color-secondary, uppercase, inherit, 1.2);
+        text-decoration: none;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 5%;
+            right: -2px;
+            width: 2px;
+            height: 90%;
+            background-color: $color-secondary;
+        }
+    }
+}
+
+.header-wrapper {
+    width: $conWidth;
+    @include flex(space-between, inherit);
+}
+
+.logo {
+    &__link {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

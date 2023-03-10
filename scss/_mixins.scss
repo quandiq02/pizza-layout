@@ -1,0 +1,22 @@
+@mixin mainBlock($w, $m, $d, $jc) {
+    width: $w;
+    margin: $m;
+    display: $d;
+    justify-content: $jc;
+}
+
+@mixin flex($jc, $fwrap) {
+    display: flex;
+    justify-content: $jc;
+    flex-wrap: $fwrap;
+}
+
+@mixin font($fz, $ff, $fw, $c, $tt, $ta, $lh) {
+    font-size: $fz;
+    font-family: $ff;
+    font-weight: $fw;
+    color: $c;
+    text-transform: $tt;
+    text-align: $ta;
+    line-height: $lh;
+}

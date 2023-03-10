@@ -1,0 +1,61 @@
+.about {
+    @include mainBlock($scWidth, 0 auto, flex, center);
+    background-image: url("../img/bg-image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &:hover {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(187deg, rgba(0, 0, 0, 0.82) 100%, rgba(0, 0, 0, 0.82) 100%), url(../img/bg-image_hovered.png);
+    }
+
+    &:hover &-image {
+        width: 0;
+        height: 0;
+    }
+}
+
+.about-wrapper {
+    position: relative;
+    width: $conWidth;
+    @include flex(flex-start, inherit);
+}
+
+.about-info {
+    flex-basis: 610px;
+}
+
+.info {
+    padding: 245px 0 285px 0;
+
+    &__title {
+        padding-top: 1px;
+        @include font(50px, $ffMontseratBold, 700, $color-tertiary, capitalize, left, 1.2);
+    }
+
+    &__subtitle {
+        width: 570px;
+        padding: 10px 0 24px 0;
+        @include font(25px, $ffRobotoLight, 200, $color-tertiary, inherit, justifyLeft, 1.2);
+        word-spacing: 1px;
+    }
+
+    &__submit {
+        background-color: transparent;
+        border: 2px solid $color-tertiary;
+        padding: 11px 27px;
+        @include font(20px, $ffMontseratSemiBold, 800, $color-tertiary, uppercase, inherit, 1.2);
+        cursor: pointer;
+    }
+}
+
+.about-image {
+    position: absolute;
+    top: 52px;
+    left: 640px;
+    width: 556px;
+    height: 720px;
+    background-image: url(../img/pizza.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
